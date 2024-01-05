@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: tenant2
+  namespace: tenant2
+spec:
+  hard:
+    requests.cpu: "64"
+    requests.memory: 256G
+    limits.cpu: "64"
+    limits.memory: 256G

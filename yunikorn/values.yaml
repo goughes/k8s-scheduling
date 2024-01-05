@@ -1,0 +1,2 @@
+enableSchedulerPlugin: true
+embedAdmissionController: false
