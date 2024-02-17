@@ -1,0 +1,52 @@
+apiVersion: scheduling.x-k8s.io/v1alpha1
+kind: ElasticQuota
+metadata:
+  name: tenant1
+  namespace: tenant1
+spec:
+  max:
+    cpu: 384
+  #  memory: 1536Gi
+  min:
+    #cpu: 128
+    cpu: 256
+  #  memory: 512Gi
+---
+apiVersion: scheduling.x-k8s.io/v1alpha1
+kind: ElasticQuota
+metadata:
+  name: tenant2
+  namespace: tenant2
+spec:
+  max:
+    cpu: 384
+  #  memory: 1536Gi
+  min:
+    cpu: 64
+  #  memory: 256Gi
+---
+apiVersion: scheduling.x-k8s.io/v1alpha1
+kind: ElasticQuota
+metadata:
+  name: tenant3
+  namespace: tenant3
+spec:
+  max:
+    cpu: 384
+  #  memory: 1536Gi
+  min:
+    cpu: 32
+  #  memory: 128Gi
+---
+apiVersion: scheduling.x-k8s.io/v1alpha1
+kind: ElasticQuota
+metadata:
+  name: tenant4
+  namespace: tenant4
+spec:
+  max:
+    cpu: 384
+  #  memory: 1536Gi
+  min:
+    cpu: 160
+  #  memory: 640Gi

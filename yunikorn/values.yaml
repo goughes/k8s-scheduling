@@ -1,0 +1,4 @@
+enableSchedulerPlugin: true
+admissionController:
+  filtering:
+    generateUniqueAppId: "true"

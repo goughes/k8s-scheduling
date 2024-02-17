@@ -1,0 +1,26 @@
+apiVersion: scheduling.x-k8s.io/v1alpha1
+kind: ElasticQuota
+metadata:
+  name: test1
+  namespace: ns1
+spec:
+  max:
+    cpu: 6
+    memory: 40Gi
+  min:
+    cpu: 4
+    memory: 20Gi
+---
+apiVersion: scheduling.x-k8s.io/v1alpha1
+kind: ElasticQuota
+metadata:
+  name: test2
+  namespace: ns2
+spec:
+  max:
+    cpu: 6
+    memory: 40Gi
+  min:
+    cpu: 4
+    memory: 20Gi
+
