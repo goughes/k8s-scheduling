@@ -27,41 +27,45 @@ data:
         queues:
         - name: root
           queues:
-          - name: sandbox
-            resources:
-              max:
-                {memory: 1536G, vcore: 384}
+          - name: tenants
             queues:
-            - name: tenants
+            - name: tenant1
+              submitacl: '*'
+              resources:
+                guaranteed:
+                  {memory: 256G, vcore: 128}
+                max:
+                  {memory: 1536G, vcore: 384}
               properties:
-                #preemption.policy: fence
-                preemption.delay: 1s
-              queues:
-              - name: tenant1
-                submitacl: '*'
-                resources:
-                  guaranteed:
-                    {memory: 256G, vcore: 128}
-                properties:
-                  priority.offset: "0"
-              - name: tenant2
-                submitacl: '*'
-                resources:
-                  guaranteed:
-                    {memory: 128G, vcore: 64}
-                properties:
-                  priority.offset: "0"
-              - name: tenant3
-                submitacl: '*'
-                resources:
-                  guaranteed:
-                    {memory: 64G, vcore: 32}
-                properties:
-                  priority.offset: "0"
-              - name: tenant4
-                submitacl: '*'
-                resources:
-                  guaranteed:
-                    {memory: 2G, vcore: 1 }
-                properties:
-                  priority.offset: "-9999"
+                priority.offset: 0
+                preemption.delay: 5s
+            - name: tenant2
+              submitacl: '*'
+              resources:
+                guaranteed:
+                  {memory: 128G, vcore: 64}
+                max:
+                  {memory: 1536G, vcore: 384}
+              properties:
+                priority.offset: 0
+                preemption.delay: 5s
+            - name: tenant3
+              submitacl: '*'
+              resources:
+                guaranteed:
+                  {memory: 64G, vcore: 32}
+                max:
+                  {memory: 1536G, vcore: 384}
+              properties:
+                priority.offset: 0
+                preemption.delay: 5s
+            - name: backfill
+              submitacl: '*'
+              resources:
+                guaranteed:
+                  {memory: 2G, vcore: 1 }
+                max:
+                  {memory: 1536G, vcore: 384}
+              properties:
+                priority.offset: -9999
+                preemption.delay: 5s
