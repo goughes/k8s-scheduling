@@ -6,11 +6,10 @@ metadata:
 spec:
   max:
     cpu: 384
-  #  memory: 1536Gi
+    memory: 1536G
   min:
-    #cpu: 128
-    cpu: 256
-  #  memory: 512Gi
+    cpu: 128
+    memory: 512G
 ---
 apiVersion: scheduling.x-k8s.io/v1alpha1
 kind: ElasticQuota
@@ -20,10 +19,10 @@ metadata:
 spec:
   max:
     cpu: 384
-  #  memory: 1536Gi
+    memory: 1536G
   min:
     cpu: 64
-  #  memory: 256Gi
+    memory: 256G
 ---
 apiVersion: scheduling.x-k8s.io/v1alpha1
 kind: ElasticQuota
@@ -33,10 +32,10 @@ metadata:
 spec:
   max:
     cpu: 384
-  #  memory: 1536Gi
+    memory: 1536G
   min:
     cpu: 32
-  #  memory: 128Gi
+    memory: 128G
 ---
 apiVersion: scheduling.x-k8s.io/v1alpha1
 kind: ElasticQuota
@@ -46,7 +45,7 @@ metadata:
 spec:
   max:
     cpu: 384
-  #  memory: 1536Gi
+    memory: 1536G
   min:
     cpu: 160
-  #  memory: 640Gi
+    memory: 640G

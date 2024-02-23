@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: tenant1-nginx
+  name: nginx
   namespace: tenant1
 spec:
   selector:
     matchLabels:
-      app: tenant1-nginx
+      app: nginx
   template:
     metadata:
       labels:
-        app: tenant1-nginx
+        app: nginx
     spec:
       schedulerName: scheduler-plugins-scheduler
       containers:
-      - name: tenant1-nginx
+      - name: nginx
         image: nginx
         ports:
         - name: http
