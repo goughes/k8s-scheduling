@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ns1-nginx
+  name: nginx
   namespace: tenant1
 spec:
   selector:
     matchLabels:
-      app: ns1-nginx
+      app: nginx
   template:
     metadata:
       labels:
-        app: ns1-nginx
-        applicationId: "my-test-app-01"
-        #queue: root.tenant1
+        app: nginx
+        applicationId: "test-nginx-01"
+        queue: root.tenants.tenant1
     spec:
       schedulerName: yunikorn
       containers:
-      - name: ns1-nginx
+      - name: nginx
         image: nginx
         ports:
         - name: http
