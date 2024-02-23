@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ns1-nginx
+  namespace: tenant1
+spec:
+  selector:
+    matchLabels:
+      app: ns1-nginx
+  template:
+    metadata:
+      labels:
+        app: ns1-nginx
+    spec:
+      schedulerName: nos-scheduler
+      containers:
+      - name: ns1-nginx
+        image: nginx
+        ports:
+        - name: http
+          containerPort: 80
+        resources:
+          limits:
+            cpu: 1
+            memory: 2Gi
+          requests:
+            cpu: 1
+            memory: 2Gi

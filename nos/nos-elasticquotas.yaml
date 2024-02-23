@@ -1,0 +1,51 @@
+apiVersion: nos.nebuly.com/v1alpha1
+kind: ElasticQuota
+metadata:
+  name: tenant1
+  namespace: tenant1
+spec:
+  max:
+    cpu: 384
+    memory: 1536G
+  min:
+    cpu: 128
+    memory: 512G
+---
+apiVersion: nos.nebuly.com/v1alpha1
+kind: ElasticQuota
+metadata:
+  name: tenant2
+  namespace: tenant2
+spec:
+  max:
+    cpu: 384
+    memory: 1536G
+  min:
+    cpu: 64
+    memory: 256G
+---
+apiVersion: nos.nebuly.com/v1alpha1
+kind: ElasticQuota
+metadata:
+  name: tenant3
+  namespace: tenant3
+spec:
+  max:
+    cpu: 384
+    memory: 1536G
+  min:
+    cpu: 32
+    memory: 128G
+---
+apiVersion: nos.nebuly.com/v1alpha1
+kind: ElasticQuota
+metadata:
+  name: tenant4
+  namespace: tenant4
+spec:
+  max:
+    cpu: 384
+    memory: 1536G
+  min:
+    cpu: 160
+    memory: 640G
