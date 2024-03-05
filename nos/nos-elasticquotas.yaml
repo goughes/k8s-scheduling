@@ -40,12 +40,12 @@ spec:
 apiVersion: nos.nebuly.com/v1alpha1
 kind: ElasticQuota
 metadata:
-  name: tenant4
-  namespace: tenant4
+  name: backfill
+  namespace: backfill
 spec:
   max:
     cpu: 384
     memory: 1536G
   min:
-    cpu: 160
-    memory: 640G
+    cpu: 2
+    memory: 8G

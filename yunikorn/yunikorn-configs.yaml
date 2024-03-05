@@ -63,7 +63,7 @@ data:
               submitacl: '*'
               resources:
                 guaranteed:
-                  {memory: 2G, vcore: 1 }
+                  {memory: 8G, vcore: 2 }
                 max:
                   {memory: 1536G, vcore: 384}
               properties:
