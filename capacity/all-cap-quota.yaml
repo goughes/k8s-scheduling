@@ -40,12 +40,12 @@ spec:
 apiVersion: scheduling.x-k8s.io/v1alpha1
 kind: ElasticQuota
 metadata:
-  name: backfill
-  namespace: backfill
+  name: unused
+  namespace: default
 spec:
   max:
     cpu: 384
     memory: 1536G
   min:
-    cpu: 2
-    memory: 8G
+    cpu: 160
+    memory: 640G
