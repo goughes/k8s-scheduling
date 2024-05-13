@@ -1,0 +1,5 @@
+experiment,run,tenant,total cores,total queue time,avg queue time,total job run time,total queue + job run time,workflow run time (makespan)
+E5,4,tenant1,768,54903,286,34563,89466,783
+E5,4,tenant2,256,6066,95,7682,13748,456
+E5,4,tenant3,242,18197,150,7261,25458,444
+E5,4,backfill,384,32339,674,17280,49619,1186
