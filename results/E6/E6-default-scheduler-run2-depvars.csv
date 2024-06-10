@@ -1,4 +1,0 @@
-experiment,run,tenant,total cores,total queue time,avg queue time,total job run time,total queue + job run time,workflow run time (makespan)
-E6,2,tenant1,120,49,1,3602,3651,121
-E6,2,tenant2,60,30,1,1800,1830,119
-E6,2,tenant3,40,20,1,1200,1220,118
